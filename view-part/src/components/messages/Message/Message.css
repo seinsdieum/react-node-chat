@@ -1,0 +1,110 @@
+.message {
+    margin-bottom: 7.5px;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 150px;
+    word-break: break-word;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.message > p {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+@keyframes message-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes upper-appear {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes upper-fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.user {
+    color: #c9c7dc;
+    text-align: right;
+    align-self: flex-end;
+    background: #3f384c;
+    background: #322157;
+}
+
+.message.user > p {
+    text-align: right;
+}
+
+
+
+
+
+.last__message {
+
+    animation: 0.2s message-appear ease-in-out;
+
+}
+
+.anonymous {
+    align-self: flex-start;
+    background: #3f384c;
+    color: #c9c7dc;
+    text-align: left;
+}
+
+.upper__message {
+    position: fixed;
+    top: 20%;
+    animation: 0.1s upper-appear ease-in-out, 0.1s upper-fade 2.9s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+
+    box-shadow: rgba(57, 57, 140, 0.2) 0px 7px 29px 0px;
+    background-color: rgba(70, 62, 103, 0.55);
+    backdrop-filter: blur(10px);
+}
+
+.message:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    text-rendering: geometricPrecision;
+}
+
+.message.user:hover {
+    background: #43316b;
+
+}
+
+.message.anonymous:hover {
+    background: #4d475d;
+
+}

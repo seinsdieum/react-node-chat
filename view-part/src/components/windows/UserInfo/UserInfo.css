@@ -1,0 +1,77 @@
+.user__window {
+    background-color: #1D1A22;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 300px;
+    max-height: 300px;
+    animation: 0.24s ease-in-out window__opening;
+    position: relative;
+}
+
+.user__cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    animation: 0.24s ease-in-out cover__opening;
+}
+
+@keyframes cover__closing {
+    from {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.0);
+    }
+}
+
+@keyframes cover__opening {
+    from {
+        background: rgba(0, 0, 0, 0.0);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes window__closing {
+    0% {
+        transform: scale(1) translateY(0vh);
+    }
+    5% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(0) translateY(100vh);
+    }
+}
+
+@keyframes window__opening {
+    100% {
+        transform: scale(1) translateY(0vh);
+    }
+    0% {
+        transform: scale(0) translateY(0vh);
+    }
+}
+
+.user__cover.closing {
+    pointer-events: none;
+    animation: 0.24s ease-in-out cover__closing;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.user__cover.closing >.user__window {
+
+    animation: 0.24s ease-in-out window__closing;
+    transform: scale(0);
+}
+
+.user__cover.closing >.user__window * {
+    opacity: 0;
+}

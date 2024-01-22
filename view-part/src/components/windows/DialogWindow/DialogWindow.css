@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dialog__window {
+min-height: 500px;
+    max-height: 500px;
+    min-width: 300px;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+
+    background-color: #1D1A22;
+}

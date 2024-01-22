@@ -1,0 +1,15 @@
+.window__bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.window__bar > * {
+    margin-right: 5px;
+}

@@ -1,0 +1,8 @@
+.message__prompt {
+    background-color: #1D1A22;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+}

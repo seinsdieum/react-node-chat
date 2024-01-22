@@ -1,0 +1,14 @@
+.nav__close {
+    font-size: 0;
+    background-color: #e84545;
+    border: none;
+    outline: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+}
+
+.nav__close:hover {
+    cursor:pointer;
+}
+
