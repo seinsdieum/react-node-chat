@@ -1,0 +1,3 @@
+exports.messages = [
+    {message: 'Подключено'}
+]
